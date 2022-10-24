@@ -1,1 +1,11 @@
-<%# Update me %><%= @monsters.inspect %>
+<h1><t style= "color:pink">Todos los Mounstros</t></h1>
+    <% @monsters.each do |mon| %>
+    <div>
+        <%= link_to mon.name, mon %>
+        <%= mon.description %>
+        <%if mon.tweet.count > 3 %>
+            <span class= "Destacado"> TWITSTAR! </span>
+        <%end%>
+    </div>
+    <% end %>
+
